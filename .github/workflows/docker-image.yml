@@ -19,7 +19,7 @@ jobs:
     - name: Run tests
       run: |
         echo -- Running tests --
-        docker-compose -f "docker-compose.yml" -p Testing up --build --exit-code-from ea_test
+        docker-compose -f "docker-compose.yml" up -d --build
     - name: Stop containers
       if: ${{ always() }}
       run: docker-compose -f "docker-compose.yml" down
