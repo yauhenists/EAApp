@@ -14,13 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    #- name: Execute Docker compose file
-    #  run: docker-compose -f "docker-compose.yml" up -d --build
     - name: Run tests
       run: |
         echo -- Running tests --
-    #    docker-compose -f "docker-compose.yml" up -d --build
         sh ./scripts/run.sh
-    #- name: Stop containers
-    #  if: ${{ always() }}
-    #  run: docker-compose -f "docker-compose.yml" down
